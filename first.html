@@ -5,13 +5,14 @@
 <title>输出杨辉三角形</title>
 </head>
 <body>
-    <p></p>
+    <p class="data"></p>
     <script type="text/javascript">
         var n=prompt();
         var array; 
         document.write(n + "行" + n + "列的杨辉三角如下："+"\n"); 
         y(n);
-        function creat(m) { 
+       
+        function first(m) { 
             for (var i = 0; i < m; i++) {
                 array[i] = new Array(); 
                 for (var j = 0; j < m; j++) {
@@ -26,21 +27,22 @@
                 }
             }
         }
-        function print(m) { 
+        
+        function second(m) { 
             for (var i = 0; i < m; i++) {
                 for (var j = 0; j < m; j++) {
                     if (array[i][j] == 0) 
                         continue;   
                     else
-                        document.write(array[i][j] + " "); 
+                        document.write(array[i][j] + " ");
                 }
-                document.write("\n"); 
+                document.write("\n");
             }
         }
         function y(n) {
             array = new Array(); 
-            creat(n);
-            print(n);
+            first(n);
+            second(n);
         }
     </script>
 </body>
