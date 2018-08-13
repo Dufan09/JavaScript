@@ -11,7 +11,7 @@
 				<h2>Recent History</h2>
 				<div class="r_header">
 					<button class="dropbtn">
-					    <a href="file:///E:Github/test1/class.html">All History</a> <img src="image/11.png">
+					<a href="ComponentRegistration1.html">All History</a> <img src="image/11.png">
 					</button>
 					<div class="dropdown-content">
 						<a href="file:///E:Github/test1/class0.html">Today</a><br>
@@ -20,14 +20,22 @@
 				</div>
 			</div>
 			<div class ="content">
-		        <div id="blog-post-demo">
-			        <blog-post 
-				        v-for="todo in todos"
-				        v-bind:todo="todo"
-			        ></blog-post>
-	            </div>
-	        </div>
-	    </div>
+				<div id="blog-post-demo">
+					<blog-post
+					v-for="todo in today"
+					:todo="todo"
+					></blog-post>
+					<div class="dayline" >
+						<div class="line1"></div>
+						<span class="line_text">Yesterday</span>
+					</div>
+					<blog-post
+					v-for="todo in yesterday"
+					:todo="todo"
+					></blog-post>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript" src="ComponentRegistration1.js"></script>
 	</body>
 </html>
